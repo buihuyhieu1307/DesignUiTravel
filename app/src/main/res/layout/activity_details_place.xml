@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsPlace">
+
+    <ImageView
+        android:id="@+id/imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        android:transitionName="transition_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/imageDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:measureAllChildren="true"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imageHeader"
+        app:layout_constraintStart_toStartOf="@id/imageHeader"
+        app:layout_constraintTop_toBottomOf="@id/imageHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_extra_bold"
+                android:text="The STRAT Hotel, Casino &amp; SkyPod"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:progressTint="@color/colorAccent"
+                    android:rating="4.5"
+                    android:stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/tvFirstRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="4.92"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvSecondRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="(510)"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="About"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvDetailsAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:alpha="0.5"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Top of the World is known as one of the
+most romantic restaurants in the city. It offers
+an intimate dining setting paired with
+an extravagant view of the entire city, all
+encompassed in a 360-degree revolving frame.
+Yes, that’s right, this restaurant allows diners
+the opportunity to see Las Vegas in its entirety
+if they’re able to stay for at least 80 minutes,
+the time needed for one full rotation."
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvVenueType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Venue Type"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:alpha="0.5"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Restaurant"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvTypeOfView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Type of View"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvDetailsTypeOfView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:alpha="0.5"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Top of the World is known as one of the
+most romantic restaurants in the city. It offers
+an intimate dining setting paired with
+an extravagant view of the entire city, all
+encompassed in a 360-degree revolving frame."
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <Button
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:drawableEnd="@drawable/ic_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custom_button"
+                android:fontFamily="@font/open_sans_extra_bold"
+                android:letterSpacing="0.1"
+                android:text="CHECK ROADMAP"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
